@@ -7,23 +7,42 @@
 	color: #0D700D;
 	border: 1px solid #CCC;
 	overflow: auto;
-	max-height: 300px;
 	text-shadow: 0 1px white;
 	text-align: left;
 	display: block;
 }
-.panda-code ol { padding-left: 15px; }
 .panda-code ol li {
     padding: 1px 10px;
     margin: 4px 0;
     border-left: 2px solid green;
-    list-style-type: decimal-leading-zero;
+    list-style-type: decimal;
 }
-.panda-code ol li:hover { background: #DEDEDE; }
+.panda-code ol li:hover { 
+	background: #DEDEDE; 
+}
 
-.panda-string, .panda-multiLineString { color: #C03; } /* string literals */
+/* Panda language specific styling */
+.panda-string, .panda-templatestring { color: #C03; } /* string literals */
 .panda-special { color: #09F; } /* words defined as special */
 .panda-keyword, .panda-extra { color: #009; } /* keywords. .panda-extra = square braces, parentheses and curly braces. */
-.panda-operators { font-weight: bold; color : #000; } /* > < & = == === !== != ! && * % + / || */
+.panda-operator { font-weight: bold; color : #000; } /* > < & = == === !== != ! && * % + / || */
 .panda-comment1, .panda-comment2, .panda-comment3 { color: #666!important; font-style: italic; } /* comments */
 .panda-int { color: #f00; }
+
+/* CSS language styling */
+.panda-cssselector { color: #FF00F5; } /* selector section */
+.panda-cssproperty { color : #105289; } /* property name */
+.panda-important { color: #f00; } /* !important declaration */
+.panda-cssunit {  } /* eg 5px 1.2em bla bla */
+.panda-selector-pseudo { color: #D36CD3; font-style: italic; } /* Pseudo part of selector strings. */
+
+/* HTML/XML lanuage styling */
+.panda-xmltag { color : #0E66D6; } /* HTML tag */
+.panda-xmlcomment { color : #666; } /* XML comment: <!-- Comment --> */
+.panda-xmltag-special { color : #A333D8; } /* a, script, body, head, html, meta, link tags. */
+.panda-xmltag-attribute { color : #0000a7; } /* attribute value */
+
+/* Javascript language styling */
+.panda-regexp { color: #F802F8; } /* regular expressions like: /regexp/ */
+.panda-JSglobal { color: #A51164; } /* colors the words: window, document, navigator and screen */
+.panda-templatestring-variable { color: orange; }
