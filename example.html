@@ -1,98 +1,98 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Panda Example</title>
-	
-	<link href="Panda.css" type="text/css" rel="stylesheet" />
-	<script type="text/javascript" src="Panda.js"></script>
-	
-	<!-- Add SQL Language -->
-	<script type="text/javascript" src="add-lang/SQL/sql.js"></script>
-	<link rel="stylesheet" href="add-lang/SQL/sql.css" />
-	
-	<style>
-		body {
-			text-align: center;
-		}
-		code {
-			width: 90%;
-			margin: 5%;
-			display: block;
-			background: #EEE;
-			padding: 5px;
-			color: green;
-			text-shadow: 0 1px #FFF;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Panda Example</title>
+
+    <link href="Panda.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="Panda.js"></script>
+
+    <!-- Add SQL Language -->
+    <script type="text/javascript" src="add-lang/SQL/sql.js"></script>
+    <link rel="stylesheet" href="add-lang/SQL/sql.css" />
+
+    <style>
+        body {
+            text-align: center;
+        }
+        code {
+            width: 90%;
+            margin: 5%;
+            display: block;
+            background: #EEE;
+            padding: 5px;
+            color: green;
+            text-shadow: 0 1px #FFF;
+        }
+    </style>
 </head>
 
 <body>
-	
-	<h3>Example Default Code</h3>
-	<code>&lt;title>Example Basic Code&lt;/title>
+
+    <h3>Example Default Code</h3>
+    <code>&lt;title>Example Basic Code&lt;/title>
 &lt;script type="text/javascript">
-	let example = 'Panda Example';
-	document.getElementById('example').innerHTML = example; 
+    let example = 'Panda Example';
+    document.getElementById('example').innerHTML = example;
 &lt;/script>
-	</code>
-	
-	<h3>Example HTML/XML Code (panda-html)</h3>
-	<code class="panda-html">&lt;meta charset="UTF-8">
+    </code>
+
+    <h3>Example HTML/XML Code (panda-html)</h3>
+    <code class="panda-html">&lt;meta charset="UTF-8">
 &lt;title>Panda Example&lt;/title>
-		
+
 &lt;div id="example">
-	&lt;span class="panda" style="display: none">Example HTML Code&lt;/span>
+    &lt;span class="panda" style="display: none">Example HTML Code&lt;/span>
 &lt;/div>
-	</code>
-	
-	<h3>Example CSS Code (panda-css)</h3>
-	<code class="panda-css">body {
-	text-align: center;
+    </code>
+
+    <h3>Example CSS Code (panda-css)</h3>
+    <code class="panda-css">body {
+    text-align: center;
 }
 code {
-	width: 90%;
-	margin: 5%;
-	display: block;
-	background: #EEE;
-	padding: 5px;
-	color: green;
-	text-shadow: 0 1px #FFF;
+    width: 90%;
+    margin: 5%;
+    display: block;
+    background: #EEE;
+    padding: 5px;
+    color: green;
+    text-shadow: 0 1px #FFF;
 }</code>
-	
-	<h3>Example JavaScript Code (panda-js)</h3>
-	<code class="panda-js">let example = 'Panda Example';
+
+    <h3>Example JavaScript Code (panda-js)</h3>
+    <code class="panda-js">let example = 'Panda Example';
 
 function runExample(text, times) {
-	for(let i = 0; i &lt; times; ++i) {
-		text += text;	
-	}
-		
-	return text;
+    for(let i = 0; i &lt; times; ++i) {
+        text += text;
+    }
+
+    return text;
 }
 
 const outcome = runExample(example, 2);
 
-//variables within template strings still recognised. 
+//variables within template strings still recognised.
 document.write(`Here is the outcome: ${outcome}`);</code>
-	
-	<h3>Example SQL Code (panda-sql)</h3>
-	<code class="panda-sql">SELECT * FROM users WHERE name = 'Panda'
+
+    <h3>Example SQL Code (panda-sql)</h3>
+    <code class="panda-sql">SELECT * FROM users WHERE name = 'Panda'
 ORDER BY name ASC
 LIMIT 0, 5</code>
-	
-	<h3>Ignored Code Block (panda-ignore)</h3>
-	<code class="panda-ignore">function runExample(text, times) {<br>
-	for(let i = 0; i &lt; times; ++i) {<br>
-		text += text;	<br>
-	}<br>
-		<br>
-	return text; <br>
+
+    <h3>Ignored Code Block (panda-ignore)</h3>
+    <code class="panda-ignore">function runExample(text, times) {<br>
+    for(let i = 0; i &lt; times; ++i) {<br>
+        text += text;    <br>
+    }<br>
+        <br>
+    return text; <br>
 }</code>
-	
-	<script type="text/javascript">
-	Panda.init();
-	</script>
-	
+
+    <script type="text/javascript">
+    Panda.init();
+    </script>
+
 </body>
 </html>

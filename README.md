@@ -1,5 +1,6 @@
 Panda Syntax Highlighter
 ===============================
+A tiny syntax highlighter that just uses regex to match language syntax, because full recursion isn't used it is fast making it ideal for smaller snippets of code, but may not be as accurate for large pieces of code.
 
 Available Languages
 -----------------------
@@ -14,10 +15,10 @@ Available Languages
 
 Intro
 ----------------
-__Panda is a tiny and simple syntax highlighting tool with the ability to easily add new languages and themes. It can parse code blocks from DOM or be used to part raw text.
+Panda is a tiny and simple syntax highlighting tool with the ability to easily add new languages and themes. It can parse code blocks from DOM or be used to parse raw text.
 
-Panda is easily customizable with the use of classnames instead of inline styling and extendable with extra languages thrugh a simple API.
-__
+Panda is easily customisable with the use of classnames instead of inline styling and extendable with extra languages through a simple API.
+
 
 ```javascript
 panda.onload(); //color all code blocks.
@@ -31,10 +32,17 @@ Using Panda
 ----------------------------
 
 #### Specifying a Language
-Specify which language to part with a classname of `panda-lang`, where "lang" is the name given to the language. If no language is specified Panda will colour it using default.
-* For a lanaguage given the name 'html' : 'panda-html'
+Specify which language to parse with a classname of `panda-{lang}`, where "{lang}" is the name given to the language. If no language is specified Panda will colour it using the default generic language.
+* For a language given the name 'html' : 'panda-html'
 * For a language named 'js' : 'panda-js'
 * etc etc...
+
+```html
+<code class="panda-css">#div2 {
+    background: blue;
+}
+</code>
+```
 
 
 #### Parsing HTML
@@ -68,12 +76,12 @@ The list below shows what "matchers" are available already in Panda:
 If the language your adding requires more Regular Expressions to be added to give yourself more of these "matcher" options, you should include a property in the object called 'regex', which should be an object containing a name for the key and a regex as the value. For example, if your adding ASP.net, you may need to add a RegExp for matching ASP tags. The key will be used to give the matching parts of the code a classname. In the example below a regex for asp tags is included with a key of 'aspTags', matching parts of the code will be given the className 'panda-aspTags'.
 ```javascript
 Panda.addLanguage('asp', {
-	matchers : 'comment1 string aspTags operators extra', //include aspTags in our matchers
-	keywords : 'dim for if else while to', //keywords in the language
-	specials : ['server', 'write', 'response', 'request'] //could be array instead
-	regex : {
-		aspTags : /((<|&lt;)%)|(%(>|&gt;))/g //our new regex and new matcher.
-	}
+    matchers : 'comment1 string aspTags operators extra', //include aspTags in our matchers
+    keywords : 'dim for if else while to', //keywords in the language
+    specials : ['server', 'write', 'response', 'request'] //could be array instead
+    regex : {
+        aspTags : /((<|&lt;)%)|(%(>|&gt;))/g //our new regex and new matcher.
+    }
 });
 ```
 

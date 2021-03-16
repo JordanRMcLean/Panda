@@ -1,15 +1,15 @@
 /* Panda Syntax Highlighter - https://github.com/AvacWeb/Panda */
 .panda-code {
-	padding: 5px 10px;
-	font-size: 1.2em;
-	font-family: monospace;
-	background: #EFEFEF;
-	color: #0D700D;
-	border: 1px solid #CCC;
-	overflow: auto;
-	text-shadow: 0 1px white;
-	text-align: left;
-	display: block;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    font-family: monospace;
+    background: #EFEFEF;
+    color: #0D700D;
+    border: 1px solid #CCC;
+    overflow: auto;
+    text-shadow: 0 1px white;
+    text-align: left;
+    display: block;
 }
 .panda-code ol li {
     padding: 1px 10px;
@@ -17,8 +17,8 @@
     border-left: 2px solid green;
     list-style-type: decimal;
 }
-.panda-code ol li:hover { 
-	background: #DEDEDE; 
+.panda-code ol li:hover {
+    background: #DEDEDE;
 }
 
 /* Panda language specific styling */
