@@ -1,4 +1,0 @@
-
-- update ints to match exponentials and floats
-- remove whitespace from front and back.
-- Content editable div?
